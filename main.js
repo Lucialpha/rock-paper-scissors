@@ -52,23 +52,23 @@ function playGame(playerSelection, auto) {
           console.log('there is a draw')
       }
   }
-    for (let i = 1; i < 6; i++){
-        let choice = prompt('choose rock, paper, or scissors');
-        console.log(`Game ${i} `);
-        game(choice);
-        console.log('Your score is: ' + yourScore);
-        console.log('computer\'s score is: ' + computerScore);
-        console.log('There was a tie score of: ' + tieScore);
+    // for (let i = 1; i < 6; i++){
+    //     let choice = prompt('choose rock, paper, or scissors');
+    //     console.log(`Game ${i} `);
+    //     game(choice);
+    //     console.log('Your score is: ' + yourScore);
+    //     console.log('computer\'s score is: ' + computerScore);
+    //     console.log('There was a tie score of: ' + tieScore);
         
 
-        if( i == 5){
-            if (yourScore > computerScore){
-                console.log(' You won!');
+    //     if( i == 5){
+    //         if (yourScore > computerScore){
+    //             console.log(' You won!');
       
-            }else if(yourScore < computerScore){
-                console.log('You lost');
-            }else {
-                console.log('Game draw!')
-            }
-        }
-    }
+    //         }else if(yourScore < computerScore){
+    //             console.log('You lost');
+    //         }else {
+    //             console.log('Game draw!')
+    //         }
+    //     }
+    // }
