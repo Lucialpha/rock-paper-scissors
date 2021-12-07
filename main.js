@@ -26,12 +26,12 @@ function playGame(playerSelection, auto) {
         }
     }
 
-    
-  function game(playerSelection){
-      let yourScore = 0;
+    let yourScore = 0;
       let computerScore = 0;
       let tieScore = 0;
-      for (let i = 0; i < 5; i++){
+  function game(playerSelection){
+      
+      
           let j = playGame(playerSelection).split(' ');
           if ( j.includes('won!')){
               yourScore++;
@@ -41,18 +41,34 @@ function playGame(playerSelection, auto) {
                 tieScore++;
           }
       
-      }
-      console.log('Your score is: ' + yourScore);
-      console.log('computer\'s score is: ' + computerScore);
-      console.log('There was a tie score of: ' + tieScore);
+
 
       if (yourScore > computerScore){
-          console.log(' You won!');
+          console.log(' You are leading!');
 
       }else if(yourScore < computerScore){
-          console.log('You lost');
+          console.log('You are loosing');
       }else {
-          console.log('Oops, there is a draw')
+          console.log('there is a draw')
       }
   }
-    game('paper');
+    for (let i = 1; i < 6; i++){
+        let choice = prompt('choose rock, paper, or scissors');
+        console.log(`Game ${i} `);
+        game(choice);
+        console.log('Your score is: ' + yourScore);
+        console.log('computer\'s score is: ' + computerScore);
+        console.log('There was a tie score of: ' + tieScore);
+        
+
+        if( i == 5){
+            if (yourScore > computerScore){
+                console.log(' You won!');
+      
+            }else if(yourScore < computerScore){
+                console.log('You lost');
+            }else {
+                console.log('Game draw!')
+            }
+        }
+    }
